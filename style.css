@@ -290,6 +290,10 @@ body.active { overflow: hidden; }
   #HEADER
 \*-----------------------------------*/
 
+.tgIcon{
+  padding-left: 5px;
+}
+
 .header {
   position: absolute;
   top: 0;
