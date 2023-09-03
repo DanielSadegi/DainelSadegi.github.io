@@ -1,117 +1,116 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const dropList = document.querySelectorAll("form select"),
-      fromCurrency = document.getElementById("fromCurrency"),
-      toCurrency = document.getElementById("toCurrency"),
-      getButton = document.querySelector("form button"),
-      exchangeIcon = document.querySelector("form .icon");
-  
-    // Словарь для соответствия кодов валют и кодов стран для флагов
-    let country_list = {
-      "AED": "AE",
-      "EUR": "FR",
-      "RUB": "RU",
-      "USDT": "",
-      "TRY": "TR",
-    };
-  
-    // Заполняем выпадающие списки валют данными
-    for (let i = 0; i < dropList.length; i++) {
-      if (i === 0) {
-        for (let currency_code in country_list) {
-          let optionTag = `<option value="${currency_code}">${currency_code}</option>`;
-          dropList[i].insertAdjacentHTML("beforeend", optionTag);
-          loadFlag(dropList[i]);
-        }
-      } else {
-        let optionTag = `<option value="USDT" selected>USDT</option>`;
-        dropList[i].insertAdjacentHTML("beforeend", optionTag);
-      }
-      dropList[i].addEventListener("change", (e) => {
-        loadFlag(e.target);
-      });
+document.addEventListener('DOMContentLoaded', function () {
+  const fromAmount = document.getElementById('from-currency-amount');
+  const toAmount = document.getElementById('to-currency-amount');
+  const fromCurrency = document.querySelector('.from-currency select');
+  const toCurrency = document.querySelector('.to-currency select');
+  const exchangeRateDisplay = document.querySelector('.exchange-rate h1');
+  const citySelector = document.querySelector('.cities');
+
+  const exchangeRates = {
+    'Moscow': {
+      'USD': 0.92,
+      'EUR': 0.85,
+      'AED': 3.67,
+      'USDT': 1
+    },
+    'Sochi': {
+      'USD': 0.9,
+      'EUR': 1.1,
+      'AED': 3.67,
+      'USDT': 1
+    },
+    'Kazan': {
+      'USD': 0.89,
+      'EUR': 1.09,
+      'AED': 2,
+      'USDT': 1
+    },
+    'Yekaterenburn': {
+      'USD': 0.9,
+      'EUR': 1.1,
+      'AED': 3.67,
+      'USDT': 1
+    },
+    'Saint Petersburg': {
+      'USD': 1,
+      'EUR': 1.1,
+      'AED': 3.67,
+      'USDT': 5
+    },
+    'Istanbul': {
+      'USD': 0.9,
+      'EUR': 1.1,
+      'AED': 3.67,
+      'USDT': 1
+    },
+    'Antaliya': {
+      'USD': 0.9,
+      'EUR': 1.1,
+      'AED': 3.67,
+      'USDT': 1
+    },
+    'Alanya': {
+      'USD': 0.9,
+      'EUR': 1.1,
+      'AED': 3.67,
+      'USDT': 1
+    },
+    'Mersin': {
+      'USD': 0.9,
+      'EUR': 1.1,
+      'AED': 3.67,
+      'USDT': 1
+    },
+    'Izmir': {
+      'USD': 0.9,
+      'EUR': 1.1,
+      'AED': 3.67,
+      'USDT': 1
+    },
+    'Ankara': {
+      'USD': 0.9,
+      'EUR': 1.1,
+      'AED': 3.67,
+      'USDT': 1
+    },
+    'Dubai': {
+      'USD': 0.9,
+      'EUR': 1.1,
+      'AED': 3.67,
+      'USDT': 1
     }
+  };
+
+
+  toAmount.addEventListener('input', function () {
+    const amount = parseFloat(toAmount.value);
+    const from = fromCurrency.value;
+    const to = toCurrency.value;
+    const selectedCity = citySelector.value;
   
-    /*exchangeIcon.addEventListener("click", () => {
-        console.log("Иконка была кликнута"); // Добавьте эту строку для проверки, достигается ли этот код
-        [fromCurrency.value, toCurrency.value] = [toCurrency.value, fromCurrency.value];
-        loadFlag(fromCurrency);
-        loadFlag(toCurrency);
-        getExchangeRate();
-      });*/
-  
-    // Загрузка флагов при выборе валюты
-    fromCurrency.addEventListener("change", (e) => {
-      loadFlag(e.target);
-      getExchangeRate();
-    });
-  
-    toCurrency.addEventListener("change", (e) => {
-      loadFlag(e.target);
-      getExchangeRate();
-    });
-  
-    // Функция для загрузки флага
-    function loadFlag(element) {
-      for (let code in country_list) {
-        if (code === element.value) {
-          let imgTag = element.parentElement.querySelector("img");
-          if (code === "USDT") {
-            // Здесь меняем иконку для валюты "USDT"
-            imgTag.src = "USDT.svg";
-          } else {
-            imgTag.src = `https://flagcdn.com/48x36/${country_list[code].toLowerCase()}.png`;
-          }
-        }
-      }
-    }
-    
-    
-  
-    // Обработчик клика на кнопку "Get Exchange Rate"
-    getButton.addEventListener("click", (e) => {
-      e.preventDefault();
-      getExchangeRate();
-    });
-  
-    // Функция для получения курса обмена
-    function getExchangeRate() {
-      const amount = document.querySelector("form input");
-      const exchangeRateTxt = document.querySelector("form .exchange-rate");
-      let amountVal = amount.value;
-  
-      if (amountVal === "" || amountVal === "0") {
-        amount.value = "1";
-        amountVal = 1;
-      }
-  
-      exchangeRateTxt.innerText = "Getting exchange rate...";
-  
-      const conversionRates = {
-        "EUR": 0.91785869,
-        "RUB": 93.617152,
-        "AED": 3.6725,
-        "TRY": 27.159115,
-        "USDT": 1,
-      };
-  
-      if (fromCurrency.value === "USDT") {
-        const convertedAmount = (amountVal * conversionRates[toCurrency.value]).toFixed(8);
-        exchangeRateTxt.innerText = `${amountVal} ${fromCurrency.value} = ${convertedAmount} ${toCurrency.value}`;
-      } else if (toCurrency.value === "USDT") {
-        const convertedAmount = (amountVal / conversionRates[fromCurrency.value]).toFixed(8);
-        exchangeRateTxt.innerText = `${amountVal} ${fromCurrency.value} = ${convertedAmount} ${toCurrency.value}`;
-      } else {
-        exchangeRateTxt.innerText = "Invalid conversion";
-      }
-    }
-  
-    // Загрузка флагов при загрузке страницы
-    for (let i = 0; i < dropList.length; i++) {
-      loadFlag(dropList[i]);
+    if (!isNaN(amount) && exchangeRates[selectedCity] && exchangeRates[selectedCity][from] && exchangeRates[selectedCity][to]) {
+      const convertedAmount = (amount / exchangeRates[selectedCity][to]) * exchangeRates[selectedCity][from];
+      fromAmount.value = convertedAmount.toFixed(2);
     }
   });
 
-  // Обработчик клика на иконку для замены иконки "USDT" на вашу иконку
-document.getElementById("usdtIcon").addEventListener("click", () => {
-  document.getElementById("usdtIcon").data = "USDT.svg";
+  function convertCurrency() {
+    const amount = parseFloat(fromAmount.value);
+    const from = fromCurrency.value;
+    const to = toCurrency.value;
+    const selectedCity = citySelector.value;
+
+    if (!isNaN(amount) && exchangeRates[selectedCity] && exchangeRates[selectedCity][from] && exchangeRates[selectedCity][to]) {
+      const convertedAmount = (amount / exchangeRates[selectedCity][from]) * exchangeRates[selectedCity][to];
+      toAmount.value = convertedAmount.toFixed(2);
+    }
+  }
+
+  fromAmount.addEventListener('input', convertCurrency);
+  fromCurrency.addEventListener('change', convertCurrency);
+  toCurrency.addEventListener('change', convertCurrency);
+  citySelector.addEventListener('change', convertCurrency);
+
+  // Initial conversion
+  convertCurrency();
 });
