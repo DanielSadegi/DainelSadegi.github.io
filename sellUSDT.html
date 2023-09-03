@@ -41,7 +41,6 @@
 
       <a href="#" class="logo">
         <img src="LOGO.png" width="102" height="102" alt="Dubai Crypto logo">
-        TOMOKO-OTC
       </a>
 
       <nav class="navbar" data-navbar>
@@ -63,6 +62,10 @@
             <a href="#" class="navbar-link" data-nav-link>Blog</a>
           </li>
 
+          <li class="navbar-item">
+            <a href="contacts.html" class="navbar-link" data-nav-link>Contacts</a>
+          </li>
+
         </ul>
       </nav>
 
@@ -72,7 +75,7 @@
         <span class="line line-3"></span>
       </button>
 
-      <a href="https://t.me/Dubai_Crypto_OTC_Desk" class="btn btn-outline">contact<i class="fa-brands fa-telegram fa-xl  tgIcon" style="color: #52bdff;"></i></a>
+      <a href="https://t.me/Dubai_Crypto_OTC_Desk" class="btn btn-outline"><i class="fa-brands fa-telegram fa-xl  tgIcon" style="color: #52bdff;"></i></a>
 
     </div>
   </header>
@@ -89,32 +92,47 @@
       -->
 
       <section class="section hero" aria-label="hero" data-section>
-          <header class="header-text">Sell USDT</header>
-          <form action="#">
-            <div class="amount">
-              <p>Enter Amount</p>
-              <input type="text" value="1">
+        <div class="containerCalc">
+          <div class="currency-converter">
+            <div class="title1">Sell USDT
             </div>
-            <div class="drop-list">
-              <div class="from">
-                <p id="fromText">From</p>
-                <div class="select-box">
-                  <img src="https://flagcdn.com/48x36/us.png" alt="flag">
-                  <select id="fromCurrency"> <!-- Options tag are inserted from JavaScript --> </select>
-                </div>
-              </div>
-              <div class="icon" id="getExchangeRate"><a href="buyUSDT.html"><i class="fas fa-exchange-alt"></a></i></div>
-              <div class="to">
-                <p id="toText">To</p>
-                <div class="select-box">
-                  <img src="https://flagcdn.com/48x36/np.png" alt="flag">
-                  <select id="toCurrency"> <!-- Options tag are inserted from JavaScript --> </select>
-                </div>
-              </div>
+            <div class="exchange-rate">
             </div>
-            <div class="exchange-rate">Getting exchange rate...</div>
-            <button>Get Exchange Rate</button>
-          </form>
+            <select class="cities">
+              <option>Moscow</option>
+              <option>Sochi</option>
+              <option>Saint Petersburg</option>
+              <option>Kazan</option>
+              <option>Yekaterenburg</option>
+              <option>Istanbul</option>
+              <option>Antaliya</option>
+              <option>Ankara</option>
+              <option>Izmir</option>
+              <option>Mersin</option>
+              <option>Alanya</option>
+              <option>Dubai</option>
+            </select>
+            <div class="from-currency">
+              <input type="number" id="from-currency-amount"  value=""/>
+              <select class="cash">
+                <option>USDT</option>
+              </select>
+            </div>
+            <div class="to-currency">
+              <input type="number" id="to-currency-amount" value="1" />
+              <select class="cash">
+                <option>AED</option>
+                <option>USD</option>
+                <option>EUR</option>
+              </select>
+            </div>
+            <div class="btnDiv">
+              <a href="" class="btn1 btn-primary2">Sell USDT</a>
+            </div>
+            
+          </div>
+        </div>
+          
       </section>
 
 
@@ -798,7 +816,7 @@
   -->
   <script src="script.js" defer></script>
   <script src="listUpdate.js" defer></script>
-  <script src="sellUSDT.js"></script>
+  <script src="buyUSDT.js"></script>
 
   <!-- 
     - ionicon link
