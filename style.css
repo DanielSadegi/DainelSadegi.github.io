@@ -398,10 +398,10 @@ body.active { overflow: hidden; }
 
 /*-----------------------------------*\
   #HERO
-\*-----------------------------------*/
+
 
 .hero { padding-block: 150px 140px; }
-
+\*-----------------------------------*/
 .hero-content { margin-block-end: 120px; }
 
 .hero-text {
@@ -703,7 +703,9 @@ body.active { overflow: hidden; }
 
 
 
-
+.wrapper{
+  width: -50;
+}
 
 /*-----------------------------------*\
   #APP
@@ -1016,7 +1018,7 @@ address.footer-contact-link { max-width: 30ch; }
 
   .header { padding-block: 5px; }
 
-  .header.active { top: -60px; }
+  .header.active { top: -80px; }
 
   .header > .container { gap: 50px; }
 

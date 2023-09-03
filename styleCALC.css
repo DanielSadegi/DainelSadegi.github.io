@@ -1,78 +1,137 @@
-form :where(input, select, button){
-  width: 100%;
-  outline: none;
-  border-radius: 5px;
-  border: none;
-}
-form p{
-  font-size: 18px;
-  margin-bottom: 5px;
-}
-form input{
-  height: 50px;
-  font-size: 17px;
-  padding: 0 15px;
-  border: 1px solid #999;
-}
-form input:focus{
-  padding: 0 14px;
-  border: 2px solid #675AFE;
-}
-form .drop-list{
-  display: flex;
-  margin-top: 40 px;
-  align-items: right;
-  justify-content: space-between;
-}
-.drop-list .select-box{
-  background-color: #ffffff;
-  display: flex;
-  width: 115px;
-  height: 45px;
-  align-items: center;
-  border-radius: 5px;
-  justify-content: center;
-  border: 1px solid #999;
-}
-.select-box img{
-  max-width: 21px;
-}
-.select-box select{
-  width: auto;
-  font-size: 16px;
-  margin: 0 -5px 0 5px;
-}
-.select-box select::-webkit-scrollbar{
-  width: 8px;
-}
-.select-box select::-webkit-scrollbar-track{
-  background: #fff;
-}
-.select-box select::-webkit-scrollbar-thumb{
-  background: #888;
-  border-radius: 8px;
-  border-right: 2px solid #ffffff;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'DM Sans', sans-serif;
+  scroll-behavior: smooth;
+  font-weight: 400;
 }
 
-.drop-list .icon{
-  cursor: pointer;
-  margin-top: 30px;
-  font-size: 22px;
+
+.containerCalc {
+  background-image: url("4.jpeg");
+  background-position-x: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100vw;
+  height: 100vh;
+
+  background-color: hsl(228, 9%, 10%);
 }
-form .exchange-rate{
-  font-size: 17px;
-  margin: 20px 0 30px;
+
+.currency-converter {
+  margin-left: -20px;
+  background-color: hsla(240, 3%, 11%, 0.814);
+  padding: 2rem;
+  border-radius: 5px;
+
 }
-form button{
-  font-size: var(--fs-6);
-  font-weight: var(--fw-500);
-  border: 1px solid var(--white);
-  padding: 5px 15px;
-  transition: var(--transition-1);
+.currency-converter .title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(6, 236, 6, 0.699);
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.currency-converter .title1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #DC143C;
+  font-size: 2rem;
+  font-weight: bold;
+
+}
+
+.exchange-rate {
+  margin: 2rem 0;
+}
+.exchange-rate p {
+  font-size: 1.2rem;
+}
+
+.from-currency,
+.to-currency {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  gap: 10px;
+}
+input,
+select {
+  width: 49%;
+  height: 50px;
+  font-size: 1.5rem;
+}
+input {
+  padding-left: 5px;
+}
+
+.cities {
+  border-radius: 10px;
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.cities select {
+  display: block;
+  margin: 0 auto;
+  font-size: 1.5rem;
+  width: 50%;
+}
+
+.exchangeBtn{
+  margin-top: 10px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+#from-currency-amount, #to-currency-amount{
+  border-radius: 10px;
+}
+
+.cash{
+  border-radius: 10px;
+  text-align: right;
+}
+
+.btn-primary1 {
+  margin-top: 16px;
+  margin-left: 25%;
+  display: flex;
+  position: relative;
+  background-color: #34C924;
+  max-width: max-content;
+  font-weight: var(--fw-700);
+  padding: 13px 30px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btn1 {
   color: var(--white);
   border-radius: 50px;
 }
-form button:is(:hover, :focus){
-  background-color: var(--blue-crayola);
-  border-color: var(--blue-crayola);
+
+a{
+  text-decoration: none;
+}
+
+.btn-primary2 {
+  margin-top: 16px;
+  margin-left: 25%;
+  display: flex;
+  position: relative;
+  background-color: #DC143C;
+  max-width: max-content;
+  font-weight: var(--fw-700);
+  padding: 13px 30px;
+  overflow: hidden;
+  z-index: 1;
 }
