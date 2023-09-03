@@ -11,73 +11,85 @@ document.addEventListener('DOMContentLoaded', function () {
       'USD': 0.92,
       'EUR': 0.85,
       'AED': 3.67,
-      'USDT': 1
+      'USDT': 1,
+      'USDC':1
     },
     'Sochi': {
       'USD': 0.9,
       'EUR': 1.1,
       'AED': 3.67,
-      'USDT': 1
+      'USDT': 1,
+      'USDC':1
     },
     'Kazan': {
       'USD': 0.89,
       'EUR': 1.09,
       'AED': 2,
-      'USDT': 1
+      'USDT': 1,
+      'USDC':1
     },
     'Yekaterenburn': {
       'USD': 0.9,
       'EUR': 1.1,
       'AED': 3.67,
-      'USDT': 1
+      'USDT': 1,
+      'USDC':1
     },
     'Saint Petersburg': {
       'USD': 1,
       'EUR': 1.1,
       'AED': 3.67,
-      'USDT': 5
+      'USDT': 5,
+      'USDC':1
     },
     'Istanbul': {
       'USD': 0.9,
       'EUR': 1.1,
       'AED': 3.67,
-      'USDT': 1
+      'USDT': 1,
+      'USDC':1
     },
     'Antaliya': {
       'USD': 0.9,
       'EUR': 1.1,
       'AED': 3.67,
-      'USDT': 1
+      'USDT': 1,
+      'USDC':1
     },
     'Alanya': {
       'USD': 0.9,
       'EUR': 1.1,
       'AED': 3.67,
-      'USDT': 1
+      'USDT': 1,
+      'USDC':1
     },
     'Mersin': {
       'USD': 0.9,
       'EUR': 1.1,
       'AED': 3.67,
-      'USDT': 1
+      'USDT': 1,
+      'USDC':1
     },
     'Izmir': {
       'USD': 0.9,
       'EUR': 1.1,
       'AED': 3.67,
-      'USDT': 1
+      'USDT': 1,
+      'USDC':1
     },
     'Ankara': {
       'USD': 0.9,
       'EUR': 1.1,
       'AED': 3.67,
-      'USDT': 1
+      'USDT': 1,
+      'USDC':1
     },
     'Dubai': {
       'USD': 0.9,
       'EUR': 1.1,
       'AED': 3.67,
-      'USDT': 1
+      'USDT': 1,
+      'USDC':1
     }
   };
 
