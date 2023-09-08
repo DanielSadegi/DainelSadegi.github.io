@@ -15,9 +15,12 @@
   <!-- 
     - custom css link
   -->
-  
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+  <link rel="stylesheet" href="styleCALC.css">
 
   <!-- 
     - google font link
@@ -25,7 +28,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-  
 </head>
 
 <body>
@@ -45,24 +47,24 @@
         <ul class="navbar-list">
 
           <li class="navbar-item">
-            <a href="MainPage.html" class="navbar-link" data-nav-link>Homepage</a>
+            <a href="MainPageRu.html" class="navbar-link" data-nav-link>Главная страницы</a>
           </li>
 
           <li class="navbar-item">
-            <a href="buyUSDT.html" class="navbar-link" data-nav-link>Buy USDT</a>
+            <a href="buyUSDTru.html" class="navbar-link" data-nav-link>Купи USDT</a>
           </li>
 
           <li class="navbar-item">
-            <a href="sellUSDT.html" class="navbar-link" data-nav-link>Sell USDT</a>
+            <a href="sellUSDTru.html" class="navbar-link active" data-nav-link>Продай USDT</a>
           </li>
 
           <li class="navbar-item">
-            <a href="#" class="navbar-link" data-nav-link>Blog</a>
-          </li> 
+            <a href="#" class="navbar-link" data-nav-link>Новости</a>
+          </li>
 
           <li class="navbar-item">
-            <a href="#" class="navbar-link active" data-nav-link>Contacts</a>
-          </li> 
+            <a href="contactsRu.html" class="navbar-link" data-nav-link>Контакты</a>
+          </li>
 
         </ul>
       </nav>
@@ -72,9 +74,9 @@
         <span class="line line-2"></span>
         <span class="line line-3"></span>
       </button>
-
+      
       <a href="https://t.me/Dubai_Crypto_OTC_Desk" class="btn btn-outline tgIcon"><i class="fa-brands fa-telegram fa-xl" style="color: #52bdff;"></i></a>
-      <a href="contactsRu.html" class="btn btn-outline">EN</a>
+      <a href="sellUSDT.html" class="btn btn-outline">RU</a>
     </div>
   </header>
 
@@ -90,48 +92,67 @@
       -->
 
       <section class="section hero" aria-label="hero" data-section>
-        <div class="container">
+        <div class="containerCalc">
+          <div class="currency-converter">
+            <div class="title1">Продай USDT
+            </div>
+            <div class="exchange-rate">
+            </div>
+            <select class="cities">
+              <option>Москва</option>
+              <option>Сочи</option>
+              <option>Питер</option>
+              <option>Казань</option>
+              <option>Екатеренбург</option>
+              <option>Стамбул</option>
+              <option>Анталия</option>
+              <option>Анкара</option>
+              <option>Измир</option>
+              <option>Мерсин</option>
+              <option>Аланья</option>
+              <option>Дубай</option>
+            </select>
+            <div class="from-currency">
+              <input type="number" id="from-currency-amount"  value=""/>
+              <select class="cash">
+                <option>USDT</option>
+                <option>USDC</option>
+              </select>
+            </div>
+            <div class="to-currency">
+              <input type="number" id="to-currency-amount" value="" />
+              <select class="cash cashForJs">
+                <option>AED</option>
+                <option>USD</option>
+                <option>EUR</option>
+              </select>
+            </div>
 
-          <div class="hero-content">
+            <div class="text-container">
+              <p id="rate">Курс: <strong><span id="left">1:0.92</span></strong></p>
+              <p id="reservoir">Резерв: <strong><span id="right"></span></strong></p>
+              
 
-            <h1 class="h1 hero-title">Buy & Sell Digital Assets In The TOMOKO</h1>
+            </div>
+            <div class="links-container">
+              
+              <a id="links"><i class="fa-brands fa-telegram fa-xl" style="padding: 5px; color: #52bdff;"></i> Есть предложения?</a>
+              <a id="links" href="">Нужно больше?</a>
 
-            <a href="https://wa.me/971552036360?text=Hi,%20I am interested in buying%20USDT."><p class="hero-text">
-                <i class="fa-brands fa-whatsapp fa-xl" style="color: #17c41a;"></i>
-                Сommunicate with us in WhatsApp</p>
-            </a>
+            </div>
 
-            <a href="https://t.me/Dubai_Crypto_OTC_Desk"><p class="hero-text">
-                <i class="fa-brands fa-telegram fa-xl" style="color: #52bdff;"></i>
-                Сommunicate with us in Telegram
-            </p>
-            </a>
+            <div class="dlcText">
+              <p style="margin-top: 10px; color: #E52B50;">
+                Доступны все цепочки для транзакций RC20, ERC20, BEP20, POLYGON, ARB, OP.</p>
 
-            <a href="https://t.me/dubaicrypto_tg"><p class="hero-text">
-               <i class="fa-brands fa-telegram fa-xl" style="color: #52bdff;"></i>
-                Also become members of our group where we are happy for everyone
-            </p></a>
-
-
-            <p class="hero-text">
-                if you are in Dubai, we are glad to see you in our office
-                <br>
-                Our office location:
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d28885.896518812635!2d55.2261268!3d25.1783546!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6b5686d9806d%3A0x74eb2354f5905e65!2sTOMOKO%20OTC!5e0!3m2!1sru!2saz!4v1693660759814!5m2!1sru!2saz" width="450" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                <br>
-                Office 118, Matloob Building, Entrance D(6)
-
-            </p>
-
-
-
-
-            <a href="buyUSDT.html" class="btn btn-primary">Get started now</a>
-
+            </div>
+            <div class="btnDiv">
+              <a href="https://t.me/Dubai_Crypto_OTC_Desk" class="btn1 btn-primary2">Продать USDT</a>
+            </div>
+            
           </div>
-
-
         </div>
+          
       </section>
 
 
@@ -150,7 +171,7 @@
             <ul class="tab-nav">
 
               <li>
-                <button class="tab-btn active">Rates</button>
+                <button class="tab-btn active">Курсы</button>
               </li>
             </ul>
 
@@ -170,10 +191,10 @@
                   <data class="card-value" value="1.00">USD 1.00</data>
 
                   <div class="card-analytics">
-                    <data class="current-price">MIN AMOUNT TO CHANGE: 10.000$</data>
+                    <data class="current-price">МИН СУММА ДЛЯ ОБМЕНА: 10.000$</data>
                   </div>
                   <td class="table-data">
-                    <button class="btn btn-outline" id="cuBtn"><a href="https://t.me/Dubai_Crypto_OTC_Desk">Exchange</a></button>
+                    <button class="btn btn-outline" id="cuBtn"><a href="buyUSDTru.html">обменять</a></button>
                   </td>
 
                 </div>
@@ -193,10 +214,10 @@
                   <data class="card-value" value="1.00">EUR 0.92</data>
 
                   <div class="card-analytics">
-                    <data class="current-price">MIN AMOUNT TO CHANGE: 10.000$</data>
+                    <data class="current-price">МИН СУММА ДЛЯ ОБМЕНА: 10.000$</data>
                   </div>
                   <td class="table-data">
-                    <button class="btn btn-outline" id="cuBtn"><a href="https://t.me/Dubai_Crypto_OTC_Desk">Exchange</a></button>
+                    <button class="btn btn-outline" id="cuBtn"><a href="buyUSDTru.html">обменять</a></button>
                   </td>
 
                 </div>
@@ -216,11 +237,11 @@
                   <data class="card-value" value="1.00">AED 3.67</data>
 
                   <div class="card-analytics">
-                    <data class="current-price">MIN AMOUNT TO CHANGE: 10.000$</data>
+                    <data class="current-price">МИН СУММА ДЛЯ ОБМЕНА: 10.000$</data>
                     
                   </div>
                   <td class="table-data">
-                    <button class="btn btn-outline" id="cuBtn"><a href="https://t.me/Dubai_Crypto_OTC_Desk">Exchange</a></button>
+                    <button class="btn btn-outline" id="cuBtn"><a href="buyUSDTru.html">обменять</a></button>
                   </td>
                 </div>
               </li>
@@ -240,11 +261,11 @@
                   <data class="card-value" value="1.00">RUB 94</data>
 
                   <div class="card-analytics">
-                    <data class="current-price">MIN AMOUNT TO CHANGE: 10.000$</data>
+                    <data class="current-price">МИН СУММА ДЛЯ ОБМЕНА: 10.000$</data>
                     
                   </div>
                   <td class="table-data">
-                    <button class="btn btn-outline" id="cuBtn"><a href="https://t.me/Dubai_Crypto_OTC_Desk">Exchange</a></button>
+                    <button class="btn btn-outline" id="cuBtn"><a href="buyUSDTru.html">обменять</a></button>
                   </td>
                 </div>
               </li>
@@ -265,11 +286,11 @@
                   <data class="card-value" value="1.00">TRY 26</data>
 
                   <div class="card-analytics">
-                    <data class="current-price">MIN AMOUNT TO CHANGE: 10.000$</data>
+                    <data class="current-price">МИН СУММА ДЛЯ ОБМЕНА: 10.000$</data>
                     
                   </div>
                   <td class="table-data">
-                    <button class="btn btn-outline" id="cuBtn"><a href="https://t.me/Dubai_Crypto_OTC_Desk">Exchange</a></button>
+                    <button class="btn btn-outline" id="cuBtn"><a href="buyUSDTru.html">обменять</a></button>
                   </td>
                 </div>
               </li>
@@ -292,7 +313,7 @@
         <div class="container">
 
           <div class="title-wrapper">
-            <h2 class="h2 section-title">Market Update</h2>
+            <h2 class="h2 section-title">Рынок в реальном времени</h2>
           </div>
 
           <div class="market-tab">
@@ -300,7 +321,7 @@
             <ul class="tab-nav">
 
               <li>
-                <button class="tab-btn active">View All</button>
+                <button class="tab-btn active">Все монеты</button>
               </li>
             </ul>
 
@@ -321,6 +342,7 @@
                   <td class="table-data">
                     <div class="wrapper">
                       <img src="coin-1.svg" width="20" height="20" alt="Bitcoin logo" class="img">
+
                       <h3>
                         <a href="#" class="coin-name">Bitcoin <span class="span">BTC</span></a>
                       </h3>
@@ -332,6 +354,8 @@
                   <td class="table-data last-update" id="BTCUSDT-price-change"></td>
 
                   <td class="table-data last-update" id="BTCUSDT-price-change-percent"%></td>
+
+
                 </tr>
 
                 <tr class="table-row">
@@ -359,6 +383,7 @@
                   <td class="table-data last-update" id="ETHUSDT-price-change"></td>
 
                   <td class="table-data last-update" id="ETHUSDT-price-change-percent"%></td>
+
                 </tr>
 
                 <tr class="table-row">
@@ -412,6 +437,7 @@
                   <td class="table-data last-price" id="SOLUSDT-price"></td>
                   <td class="table-data last-update" id="SOLUSDT-price-change"></td>
                   <td class="table-data last-update" id="SOLUSDT-price-change-percent"%></td>
+  
                 </tr>
 
                 <tr class="table-row">
@@ -438,6 +464,7 @@
                   <td class="table-data last-price" id="XRPUSDT-price"></td>
                   <td class="table-data last-update" id="XRPUSDT-price-change"></td>
                   <td class="table-data last-update" id="XRPUSDT-price-change-percent"%></td>
+    
                 </tr>
 
                 <tr class="table-row">
@@ -464,7 +491,6 @@
                   <td class="table-data last-price" id="ADAUSDT-price"></td>
                   <td class="table-data last-update" id="ADAUSDT-price-change"></td>
                   <td class="table-data last-update" id="ADAUSDT-price-change-percent"%></td>
-                  <td class="table-data market-cap"></td>
                 </tr>
 
                 <tr class="table-row">
@@ -517,6 +543,7 @@
 
                   <td class="table-data last-price" id="AVAXUSDT-price"></td>
                   <td class="table-data last-update" id="AVAXUSDT-price-change"></td>
+
                   <td class="table-data last-update" id="AVAXUSDT-price-change-percent"%></td>
                 </tr>
 
@@ -596,17 +623,60 @@
         - #INSTRUCTION
       -->
 
-
-
-
-
       <!-- 
         - #ABOUT
       -->
 
+      <section class="section about" aria-label="about" data-section>
+        <div class="container">
+
+          <figure class="about-banner">
+            <img src="about-banner.png" width="748" height="436" loading="lazy" alt="about banner"
+              class="w-100">
+          </figure>
+
+          <div class="about-content">
+
+            <h2 class="h2 section-title">Что такое Томоко?</h2>
+
+            <p class="section-text">
+                Большой выбор валют стран и городов, качественный сервис и быстрый ответ, с нами вы можете забыть о больших процентах и длинных ответах, мы также всегда рады помочь в нашем telegram-канале, где вы можете связаться с нами во вкладке<a href="contacts.html" style="text-decoration: underline; color:#52bdff ;" >контакты</a>       </p>
 
 
+            <ul class="section-list">
 
+              <li class="section-item">
+                <div class="title-wrapper">
+                  <ion-icon name="checkmark-circle" aria-hidden="true"></ion-icon>
+
+                  <h3 class="h3 list-title">Просмотр цен на криптовалюты в режиме реального времени</h3>
+                </div>
+
+                <p class="item-text">
+                    Вы можете следить за всеми новостями и изменениями цен в прямом эфире на TOMOKO                </p>
+              </li>
+
+              <li class="section-item">
+                <div class="title-wrapper">
+                  <ion-icon name="checkmark-circle" aria-hidden="true"></ion-icon>
+
+                  <h3 class="h3 list-title">Покупайте и продавайте USDT, USDC, USD, ЕВРО и т.д...</h3>
+                </div>
+
+                <p class="item-text">
+                    Наш веб-сайт предоставляет все удобства для покупки и продажи как валют, так и USDT и других сетей                </p>
+              </li>
+
+            </ul>
+
+            <a href="https://t.me/Dubai_Crypto_OTC_Desk" class="btn btn-primary">Подробнее</a>
+
+          </div>
+
+        </div>
+      </section>
+
+    </main>
 
 
 
@@ -622,7 +692,8 @@
         <div class="footer-brand">
 
           <a href="#" class="logo">
-            <img src="LOGO.png" width="134" height="134" alt="Dubai Crypto logo">
+            <img src="LOGO.png" width="102" height="102" alt="Dubai Crypto logo">
+            TOMOKO-OTC
           </a>
 
           <h2 class="footer-title"></h2>
@@ -636,126 +707,126 @@
 
         <ul class="footer-list">
 
-          <li>
-            <p class="footer-list-title">Products</p>
-          </li>
-
-          <li>
-            <a href="buyUSDT.html" class="footer-link">Calculate Exchange</a>
-          </li>
-        </ul>
-
-        <ul class="footer-list">
-
-          <li>
-            <p class="footer-list-title">Locations</p>
-          </li>
-
-          <li>
-            <a href="https://t.me/Dubai_Crypto_OTC_Desk" class="footer-link">Dubai</a>
-          </li>
-
-          <li>
-            <a href="https://t.me/Dubai_Crypto_OTC_Desk" class="footer-link">Izmir</a>
-          </li>
-
-          <li>
-            <a href="https://t.me/Dubai_Crypto_OTC_Desk" class="footer-link">Mersin</a>
-          </li>
-
-          <li>
-            <a href="https://t.me/Dubai_Crypto_OTC_Desk" class="footer-link">Istanbul</a>
-          </li>
-
-          <li>
-            <a href="https://t.me/Dubai_Crypto_OTC_Desk" class="footer-link">Antaliya</a>
-          </li>
-
-          <li>
-            <a href="https://t.me/Dubai_Crypto_OTC_Desk" class="footer-link">Alanya</a>
-          </li>
-
-          <li>
-            <a href="https://t.me/Dubai_Crypto_OTC_Desk" class="footer-link">Ankara</a>
-          </li>
-
-          <li>
-            <a href="https://t.me/Dubai_Crypto_OTC_Desk" class="footer-link">Moscow</a>
-          </li>
-
-          <li>
-            <a href="https://t.me/Dubai_Crypto_OTC_Desk" class="footer-link">St-Petersburg</a>
-          </li>
-
-          <li>
-            <a href="https://t.me/Dubai_Crypto_OTC_Desk" class="footer-link">Kazan</a>
-          </li>
-
-          <li>
-            <a href="https://t.me/Dubai_Crypto_OTC_Desk" class="footer-link">Yekaterenburg</a>
-          </li>
-
-          <li>
-            <a href="https://t.me/Dubai_Crypto_OTC_Desk" class="footer-link">Sochi</a>
-          </li>
-
-
-
-
-
-        </ul>
-
-        <ul class="footer-list">
-
-          <li>
-            <p class="footer-list-title"><a href="https://t.me/Dubai_Crypto_OTC_Desk">Support</a></p>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">FAQ</a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">Help Center</a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">User Feedback</a>
-          </li>
-
-          <li>
-            <a href="https://t.me/Dubai_Crypto_OTC_Desk" class="footer-link">Submit a request</a>
-          </li>
-
-        </ul>
-
-        <ul class="footer-list">
-
-          <li>
-            <p class="footer-list-title">Crypto</p>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">Buy AED</a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">Sell AED</a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">Buy USDT</a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">Sell USDT</a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">Buy Crypto</a>
-          </li>
-
-        </ul>
+            <li>
+              <p class="footer-list-title">Сервисы</p>
+            </li>
+  
+            <li>
+              <a href="buyUSDT.html" class="footer-link">Рассчитай обмен</a>
+            </li>
+          </ul>
+  
+          <ul class="footer-list">
+  
+            <li>
+              <p class="footer-list-title">Города</p>
+            </li>
+  
+            <li>
+              <a href="https://t.me/Dubai_Crypto_OTC_Desk" class="footer-link">Дубай</a>
+            </li>
+  
+            <li>
+              <a href="https://t.me/Dubai_Crypto_OTC_Desk" class="footer-link">Измир</a>
+            </li>
+  
+            <li>
+              <a href="https://t.me/Dubai_Crypto_OTC_Desk" class="footer-link">Мерсин</a>
+            </li>
+  
+            <li>
+              <a href="https://t.me/Dubai_Crypto_OTC_Desk" class="footer-link">Стамбул</a>
+            </li>
+  
+            <li>
+              <a href="https://t.me/Dubai_Crypto_OTC_Desk" class="footer-link">Анталия</a>
+            </li>
+  
+            <li>
+              <a href="https://t.me/Dubai_Crypto_OTC_Desk" class="footer-link">Аланья</a>
+            </li>
+  
+            <li>
+              <a href="https://t.me/Dubai_Crypto_OTC_Desk" class="footer-link">Анкара</a>
+            </li>
+  
+            <li>
+              <a href="https://t.me/Dubai_Crypto_OTC_Desk" class="footer-link">Москва</a>
+            </li>
+  
+            <li>
+              <a href="https://t.me/Dubai_Crypto_OTC_Desk" class="footer-link">Питер</a>
+            </li>
+  
+            <li>
+              <a href="https://t.me/Dubai_Crypto_OTC_Desk" class="footer-link">Казань</a>
+            </li>
+  
+            <li>
+              <a href="https://t.me/Dubai_Crypto_OTC_Desk" class="footer-link">Екатеренбург</a>
+            </li>
+  
+            <li>
+              <a href="https://t.me/Dubai_Crypto_OTC_Desk" class="footer-link">Сочи</a>
+            </li>
+  
+  
+  
+  
+  
+          </ul>
+  
+          <ul class="footer-list">
+  
+            <li>
+              <p class="footer-list-title"><a href="https://t.me/Dubai_Crypto_OTC_Desk">Обратная связь</a></p>
+            </li>
+  
+            <li>
+              <a href="https://t.me/Dubai_Crypto_OTC_Desk" class="footer-link">FAQ</a>
+            </li>
+  
+            <li>
+              <a href="https://t.me/Dubai_Crypto_OTC_Desk" class="footer-link">Нужна помощь?</a>
+            </li>
+  
+            <li>
+              <a href="https://t.me/Dubai_Crypto_OTC_Desk" class="footer-link">Оставь Отзыв!</a>
+            </li>
+  
+            <li>
+              <a href="https://t.me/Dubai_Crypto_OTC_Desk" class="footer-link">Напиши нам!</a>
+            </li>
+  
+          </ul>
+  
+          <ul class="footer-list">
+  
+            <li>
+              <p class="footer-list-title">Крипта</p>
+            </li>
+  
+            <li>
+              <a href="sellUSDTru.html" class="footer-link">Купить AED</a>
+            </li>
+  
+            <li>
+              <a href="buyUSDTru.html" class="footer-link">Продать AED</a>
+            </li>
+  
+            <li>
+              <a href="buyUSDTru.html" class="footer-link">Купть USDT</a>
+            </li>
+  
+            <li>
+              <a href="sellUSDTru.html" class="footer-link">Продать USDT</a>
+            </li>
+  
+            <li>
+              <a href="buyUSDTru.html" class="footer-link">Купить Крипту</a>
+            </li>
+  
+          </ul>
 
       </div>
     </div>
@@ -809,7 +880,8 @@
   -->
   <script src="script.js" defer></script>
   <script src="listUpdate.js" defer></script>
-
+  <script src="sellUSDTru.js"></script>
+  <script src="reservoirSell.js"></script>
   <!-- 
     - ionicon link
   -->

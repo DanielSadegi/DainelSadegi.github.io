@@ -290,9 +290,6 @@ body.active { overflow: hidden; }
   #HEADER
 \*-----------------------------------*/
 
-.tgIcon{
-  padding-left: 5px;
-}
 
 .header {
   position: absolute;
@@ -306,11 +303,13 @@ body.active { overflow: hidden; }
 
 .header.active {
   position: fixed;
-  top: -70px;
   background-color: var(--white);
   box-shadow: var(--shadow-1);
   animation: slideIn 0.25s var(--cubic-out) forwards;
 }
+
+
+
 
 @keyframes slideIn {
 
@@ -1018,7 +1017,7 @@ address.footer-contact-link { max-width: 30ch; }
 
   .header { padding-block: 5px; }
 
-  .header.active { top: -80px; }
+  .header.active { top: -77px; }
 
   .header > .container { gap: 50px; }
 
@@ -1116,6 +1115,11 @@ address.footer-contact-link { max-width: 30ch; }
 
 @media (min-width: 1200px) {
 
+
+  .tgIcon{
+    margin-right: -40px;
+  }
+
   /**
    * CUSTOM PROPERTY
    */
@@ -1145,7 +1149,7 @@ address.footer-contact-link { max-width: 30ch; }
    * HEADER
    */
 
-  .header.active { top: -64px; }
+  .header.active { top: -77px; }
 
   .navbar-link { font-size: unset; }
 
