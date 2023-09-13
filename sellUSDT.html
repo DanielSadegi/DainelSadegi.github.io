@@ -59,7 +59,7 @@
           </li>
 
           <li class="navbar-item">
-            <a href="#" class="navbar-link" data-nav-link>Blog</a>
+            <a href="blog.html" class="navbar-link" data-nav-link>Blog</a>
           </li>
 
           <li class="navbar-item">
@@ -98,7 +98,8 @@
             </div>
             <div class="exchange-rate">
             </div>
-            <select class="cities">
+            <select class="cities" id="citySelect">
+              <option>Dubai</option>
               <option>Moscow</option>
               <option>Sochi</option>
               <option>Saint Petersburg</option>
@@ -110,7 +111,6 @@
               <option>Izmir</option>
               <option>Mersin</option>
               <option>Alanya</option>
-              <option>Dubai</option>
             </select>
             <div class="from-currency">
               <input type="number" id="from-currency-amount"  value=""/>
@@ -885,7 +885,7 @@
   -->
   <script src="script.js" defer></script>
   <script src="listUpdate.js" defer></script>
-  <script src="buyUSDT.js"></script>
+  <script src="sellUSDT.js"></script>
   <script src="reservoirSell.js"></script>
   <!-- 
     - ionicon link
