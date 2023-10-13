@@ -1,8 +1,6 @@
 'use strict';
 
-/**
- * add event on element
- */
+
 
 const addEventOnElem = function (elem, type, callback) {
   if (elem.length > 1) {
@@ -16,9 +14,7 @@ const addEventOnElem = function (elem, type, callback) {
 
 
 
-/**
- * navbar toggle
- */
+
 
 const navbar = document.querySelector("[data-navbar]");
 const navbarLinks = document.querySelectorAll("[data-nav-link]");
@@ -42,9 +38,6 @@ addEventOnElem(navbarLinks, "click", closeNavbar);
 
 
 
-/**
- * header active
- */
 
 const header = document.querySelector("[data-header]");
 
@@ -60,9 +53,7 @@ addEventOnElem(window, "scroll", activeHeader);
 
 
 
-/**
- * toggle active on add to fav
- */
+
 
 const addToFavBtns = document.querySelectorAll("[data-add-to-fav]");
 
@@ -74,9 +65,6 @@ addEventOnElem(addToFavBtns, "click", toggleActive);
 
 
 
-/**
- * scroll revreal effect
- */
 
 const sections = document.querySelectorAll("[data-section]");
 
