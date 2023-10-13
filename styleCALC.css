@@ -139,9 +139,8 @@ a{
 
 
 .text-container {
-  display: flex; /* Используем flex-контейнер для выравнивания элементов по горизонтали */
-  justify-content: space-between; /* Распределяем пространство между элементами */
-}
+  display: flex; 
+  justify-content: space-between; 
 
 #reservoir,#rate{
   color: whitesmoke;
