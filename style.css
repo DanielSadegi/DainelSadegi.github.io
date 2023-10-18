@@ -2,6 +2,9 @@
   #style.css
 \*-----------------------------------*/
 
+/** 
+ * copyrights 2022 
+ */
 
 :root {
 
@@ -15,7 +18,7 @@
   --blue-crayola_10: hsla(222, 100%, 61%, 0.05);
   --smocky-black_30: hsla(0, 0%, 6%, 0.3);
   --eerie-black-1: hsl(240, 5%, 8%);
-  --eerie-black-2: hsl(228, 9%, 10%);
+  --eerie-black-2: #17181c;
   --raisin-black: hsl(225, 15%, 16%);
   --blue-crayola: hsl(222, 100%, 61%);
   --roman-silver: hsl(223, 10%, 52%);
@@ -500,7 +503,27 @@ body.active { overflow: hidden; }
 
 
 
+.hero-banner img.w-100 {
+  border-radius: 10px; 
+  filter: grayscale(100%); 
+}
 
+
+@media only screen and (max-width: 390px) {
+  .h1 hero-title{
+    font-size: 20.5px
+  }
+  .hero-text{
+    font-size: 17.5px;
+    margin-bottom: 14px 25px;
+  }
+  
+  .logoPNG{
+    width: 123px;
+  }
+
+
+}
 
 /*-----------------------------------*\
   #MARKET
